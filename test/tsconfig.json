@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "strictFunctionTypes": false,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "lib": [
+      "es6"
+    ]
+  }
+}
