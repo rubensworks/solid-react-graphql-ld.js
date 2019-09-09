@@ -19,7 +19,7 @@ export class QueryEngine {
 
   constructor(sources: IDataSource[], context?: any) {
     this.client = new Client({
-      context: [ require('./context.json'), context || {} ],
+      context: [ require('@solid/context'), context || {} ],
       queryEngine: new QueryEngineComunicaSolid({ sources }),
     });
   }

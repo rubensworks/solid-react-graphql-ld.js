@@ -22,7 +22,6 @@
   "files": [
     "lib/**/*.d.ts",
     "lib/**/*.js",
-    "lib/**/*.json",
     "index.d.ts",
     "index.js"
   ],
@@ -76,6 +75,7 @@
   },
   "dependencies": {
     "@rdfjs/data-model": "^1.1.1",
+    "@solid/context": "^1.0.0",
     "@solid/react": "^1.7.0",
     "@types/rdf-js": "^2.0.2",
     "@types/react": "^16.9.2",
