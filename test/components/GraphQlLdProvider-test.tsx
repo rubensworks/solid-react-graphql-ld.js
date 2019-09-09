@@ -2,11 +2,14 @@ import { cleanup, render } from '@testing-library/react';
 import {Client as GraphQLLdClient} from "graphql-ld";
 import React, { useContext } from 'react';
 import {GraphQlLdProvider} from "../../lib/components/GraphQlLdProvider";
-import {getGraphQlLdContext} from "../../lib/context/GraphQlLdContext";
+import {getGraphQlLdContext, resetGraphQlLdContext} from "../../lib/context/GraphQlLdContext";
 
 describe('GraphQlLdProvider', () => {
 
-  afterEach(cleanup);
+  afterEach(() => {
+    cleanup();
+    resetGraphQlLdContext();
+  });
 
   const sources1 = [
     "http://example.org/source1",
