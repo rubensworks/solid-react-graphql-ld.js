@@ -31,6 +31,8 @@
     "test"
   ],
   "devDependencies": {
+    "@testing-library/react": "^9.1.4",
+    "@testing-library/react-hooks": "^2.0.1",
     "@types/jest": "^24.0.0",
     "@types/n3": "^1.0.4",
     "coveralls": "^3.0.0",
@@ -41,26 +43,30 @@
     "n3": "^1.0.0",
     "pre-commit": "^1.2.2",
     "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "ts-jest": "^24.0.0",
     "tslint": "^5.8.0",
     "tslint-eslint-rules": "^5.3.1",
     "typescript": "^3.0.1"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "jest-rdf",
+    "setupFilesAfterEnv": [
+      "jest-rdf"
+    ],
     "transform": {
-      "^.+\\.ts$": "ts-jest"
+      "^.+\\.tsx?$": "ts-jest"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
     ],
-    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.ts$",
+    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.tsx?$",
     "moduleFileExtensions": [
       "ts",
-      "js"
+      "tsx",
+      "js",
+      "jsx"
     ],
-    "collectCoverage": true,
-    "testEnvironment": "node"
+    "collectCoverage": true
   },
   "scripts": {
     "test": "jest ${1}",

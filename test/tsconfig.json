@@ -6,6 +6,7 @@
     "jsx": "react",
     "esModuleInterop": true,
     "lib": [
+      "dom",
       "es6"
     ]
   }
