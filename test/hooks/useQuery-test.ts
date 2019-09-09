@@ -15,7 +15,7 @@ describe('useQuery', () => {
   it('destroys the evaluator after unmounting', () => {
     const { unmount } = renderHook(() => useQuery({ query: '{ name }' }));
     unmount();
-    expect(evaluator.destroy).toHaveBeenCalledTimes(1);
+    expect(evaluator.destroy).toHaveBeenCalled();
   });
 
   it('resolves a query', () => {

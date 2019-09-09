@@ -35,7 +35,7 @@ describe('Query', () => {
       {responseHandler}
     </Query>);
     unmount();
-    expect(evaluator.destroy).toHaveBeenCalledTimes(1);
+    expect(evaluator.destroy).toHaveBeenCalled();
   });
 
   it('should render query results', () => {
