@@ -12,7 +12,7 @@ which means that GraphQL-LD queries will be able to query private resources when
 
 More details on what kinds of queries you can write can be found in the [README of the GraphQL-to-SPARQL repository](https://github.com/rubensworks/graphql-to-sparql.js).
 
-_This package makes use of the [Comunica](Comunica) query engine using the [GraphQL-LD Comunica wrapper](https://github.com/rubensworks/graphql-ld-comunica.js)._
+_This package makes use of the [Comunica](Comunica) query engine using the [GraphQL-LD Comunica Solid wrapper](https://github.com/rubensworks/graphql-ld-comunica-solid.js)._
 
 ## Installation
 
