@@ -82,7 +82,6 @@
     "version": "manual-git-changelog onversion"
   },
   "dependencies": {
-    "@rdfjs/data-model": "^1.1.1",
     "@solid/context": "^1.0.0",
     "@solid/react": "^1.7.0",
     "@types/rdf-js": "^2.0.2",
@@ -90,7 +89,6 @@
     "graphql-ld": "^1.0.0",
     "graphql-ld-comunica-solid": "^1.0.0",
     "prop-types": "^15.7.2",
-    "solid-auth-client": "^2.3.1",
     "ts-invariant": "^0.4.4"
   },
   "peerDependencies": {

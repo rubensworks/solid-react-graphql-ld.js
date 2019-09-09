@@ -5207,7 +5207,7 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-solid-auth-client@^2.2.14, solid-auth-client@^2.3.0, solid-auth-client@^2.3.1:
+solid-auth-client@^2.2.14, solid-auth-client@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/solid-auth-client/-/solid-auth-client-2.3.1.tgz#bb388eccbee317a567d4530ecd4758682a3ba753"
   integrity sha512-lWTdXW94agrwNmtH0KkO0QG6qjGN+QPKo9SHdN0pESqR/wehEF10HcD52pYMthcxjdK5k/Lw84qnCLrf5SN/6A==
