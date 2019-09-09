@@ -17,8 +17,9 @@ $ yarn install solid-react-graphql-ld
 TODO
 
 ```jsx
-<Query
-  query={gql`
+<GraphQlLdProvider sources={[ activeProfile ]}>
+  <Query
+    query={gql`
     query @single {
       name @single
       image @single
@@ -27,35 +28,35 @@ TODO
       }
     }
   `}
-  sources={[ activeProfile ]}
->
-  {({ loading, error, data }) => {
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error :(</p>;
-    console.log(data);
-    return (
-      <dl>
-        <dt>Full name</dt>
-        <dd>{data.name}</dd>
-        <dt>Image</dt>
-        <dd><img src={data.image} alt={data.name} width="100px" /></dd>
-        <dt>Friends</dt>
-        <dd>
-          <ul>
-            {
-              data.friends && data.friends.map(friend =>
-              <li key={friend.id}>
-                <button onClick={() => this.viewProfile(friend.id)}>
-                  {friend.id}
-                </button>
-              </li>)
-            }
-          </ul>
-        </dd>
-      </dl>
-    );
-  }}
-</Query>
+  >
+    {({ loading, error, data }) => {
+      if (loading) return <p>Loading...</p>;
+      if (error) return <p>Error :(</p>;
+      console.log(data);
+      return (
+        <dl>
+          <dt>Full name</dt>
+          <dd>{data.name}</dd>
+          <dt>Image</dt>
+          <dd><img src={data.image} alt={data.name} width="100px" /></dd>
+          <dt>Friends</dt>
+          <dd>
+            <ul>
+              {
+                data.friends && data.friends.map(friend =>
+                  <li key={friend.id}>
+                    <button onClick={() => this.viewProfile(friend.id)}>
+                      {friend.id}
+                    </button>
+                  </li>)
+              }
+            </ul>
+          </dd>
+        </dl>
+      );
+    }}
+  </Query>
+</GraphQlLdProvider>
 ```
 
 ## License

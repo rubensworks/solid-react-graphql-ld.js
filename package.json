@@ -82,7 +82,8 @@
     "graphql-ld": "^1.0.0",
     "graphql-ld-comunica-solid": "^1.0.0",
     "prop-types": "^15.7.2",
-    "solid-auth-client": "^2.3.1"
+    "solid-auth-client": "^2.3.1",
+    "ts-invariant": "^0.4.4"
   },
   "peerDependencies": {
     "react": "^16.9.0"

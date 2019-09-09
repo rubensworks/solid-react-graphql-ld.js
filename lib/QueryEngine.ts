@@ -1,7 +1,6 @@
-import {IDataSource} from "@comunica/bus-rdf-resolve-quad-pattern";
 import {Client, QueryArgs} from "graphql-ld";
-import {QueryEngineComunicaSolid} from "graphql-ld-comunica-solid";
 import {ExecutionResult, ExecutionResultDataDefault} from "graphql/execution/execute";
+
 const { createTaskQueue } = require('@solid/react/src/util'); // tslint:disable-line:no-var-requires
 
 const evaluatorQueue = createTaskQueue();
@@ -17,11 +16,8 @@ export class QueryEngine {
   private pending: Promise<ExecutionResult> = null;
   private cancel: boolean = false;
 
-  constructor(sources: IDataSource[], context?: any) {
-    this.client = new Client({
-      context: [ require('@solid/context'), context || {} ],
-      queryEngine: new QueryEngineComunicaSolid({ sources }),
-    });
+  constructor(client: Client) {
+    this.client = client;
   }
 
   public destroy() {

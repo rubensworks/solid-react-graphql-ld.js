@@ -1,6 +1,6 @@
-import {IDataSource} from "@comunica/bus-rdf-resolve-quad-pattern";
 import {QueryArgs} from "graphql-ld";
-import {useDebugValue, useEffect, useState} from 'react';
+import {useContext, useDebugValue, useEffect, useState} from 'react';
+import {getGraphQlLdContext} from "../context/GraphQlLdContext";
 import {IQueryValueState, QueryEngine} from "../QueryEngine";
 const {useWebId, useLiveUpdate} = require('@solid/react'); // tslint:disable-line:no-var-requires
 
@@ -8,13 +8,12 @@ const valueState: IQueryValueState = { loading: true, error: undefined, data: un
 
 /**
  * A hook for executing a GraphQL-LD query.
- * @param {IDataSource[]} sources A list of sources.
  * @param {QueryArgs} queryArgs Query arguments, which must contain at least a query.
- * @param context An optional JSON-LD context.
  * @return {IQueryValueState} The query response.
  */
-export function useQuery(sources: IDataSource[], queryArgs: QueryArgs, context: any = {}): IQueryValueState {
-  // Grab the user's WebID and the latest update
+export function useQuery(queryArgs: QueryArgs): IQueryValueState {
+  // Grab information from other hooks
+  const context = useContext(getGraphQlLdContext());
   const webId = useWebId();
   const latestUpdate = useLiveUpdate();
 
@@ -24,10 +23,10 @@ export function useQuery(sources: IDataSource[], queryArgs: QueryArgs, context: 
 
   // Initialize the query engine
   useEffect(() => {
-    const engine = new QueryEngine(sources, context);
+    const engine = new QueryEngine(context.client);
     engine.evaluate(queryArgs, (changed) => update((current) => ({ ...current, ...changed })));
     return () => engine.destroy();
-  }, [ sources, latestUpdate, webId ]);
+  }, [ context.client, latestUpdate, webId ]);
 
   // Return the state components
   return { loading, error, data };
