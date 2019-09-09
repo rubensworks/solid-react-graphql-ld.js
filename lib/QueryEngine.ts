@@ -1,7 +1,7 @@
 import {Client, QueryArgs} from "graphql-ld";
 import {ExecutionResult, ExecutionResultDataDefault} from "graphql/execution/execute";
 
-const { createTaskQueue } = require('@solid/react/src/util'); // tslint:disable-line:no-var-requires
+const { createTaskQueue } = require('@solid/react/lib/util'); // tslint:disable-line:no-var-requires
 
 const evaluatorQueue = createTaskQueue();
 
