@@ -3435,6 +3435,11 @@ jest-message-util@^24.9.0:
     slash "^2.0.0"
     stack-utils "^1.0.1"
 
+jest-mock-promise@^1.0.23:
+  version "1.0.23"
+  resolved "https://registry.yarnpkg.com/jest-mock-promise/-/jest-mock-promise-1.0.23.tgz#c921fd6b512ac546097edbcf477f3d4169657e40"
+  integrity sha1-ySH9a1EqxUYJftvPR389QWllfkA=
+
 jest-mock@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-24.9.0.tgz#c22835541ee379b908673ad51087a2185c13f1c6"

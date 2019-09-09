@@ -14,7 +14,6 @@ export class QueryEngine {
   private readonly client: Client;
 
   private pending: Promise<ExecutionResult> = null;
-  private cancel: boolean = false;
 
   constructor(client: Client) {
     this.client = client;
@@ -22,7 +21,6 @@ export class QueryEngine {
 
   public destroy() {
     this.pending = null;
-    this.cancel = true;
     evaluatorQueue.clear(this);
   }
 
@@ -31,16 +29,7 @@ export class QueryEngine {
     updateCallback({ loading: true, error: undefined });
 
     // Schedule the query evaluation
-    try {
-      await evaluatorQueue.schedule(() => this.evaluateScheduled(queryArgs, updateCallback));
-    } catch (error) {
-      updateCallback({ loading: false, error });
-    }
-
-    // Stop if results are no longer needed
-    if (this.cancel) {
-      return;
-    }
+    await evaluatorQueue.schedule(() => this.evaluateScheduled(queryArgs, updateCallback));
   }
 
   public async evaluateScheduled(queryArgs: QueryArgs, updateCallback: (newState: IQueryValueState) => void) {
