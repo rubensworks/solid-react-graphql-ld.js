@@ -13,8 +13,8 @@ import {useQuery} from '../hooks/useQuery';
 export function Query({ query, children, variables = {}, queryEngineOptions = {} }: {
   children: (IQueryValueState: any) => JSX.Element | null,
   query: string | DocumentNode,
-  variables: { [key: string]: any; },
-  queryEngineOptions: any,
+  variables?: { [key: string]: any; },
+  queryEngineOptions?: any,
 }) {
   const result = useQuery({ query, variables, queryEngineOptions });
   return children && result ? children(result) : null;
