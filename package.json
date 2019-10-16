@@ -32,7 +32,7 @@
   ],
   "devDependencies": {
     "@testing-library/react": "^9.1.4",
-    "@testing-library/react-hooks": "^2.0.1",
+    "@testing-library/react-hooks": "^3.0.0",
     "@types/jest": "^24.0.0",
     "@types/n3": "^1.0.4",
     "coveralls": "^3.0.0",
