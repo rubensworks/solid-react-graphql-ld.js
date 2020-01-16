@@ -1,6 +1,6 @@
 {
   "name": "solid-react-graphql-ld",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React components and hooks for building Solid apps with GraphQL-LD",
   "keywords": [
     "solid",
