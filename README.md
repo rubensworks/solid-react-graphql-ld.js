@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/rubensworks/solid-react-graphql-ld.js.svg?branch=master)](https://travis-ci.org/rubensworks/solid-react-graphql-ld.js)
 [![Coverage Status](https://coveralls.io/repos/github/rubensworks/solid-react-graphql-ld.js/badge.svg?branch=master)](https://coveralls.io/github/rubensworks/solid-react-graphql-ld.js?branch=master)
-[![npm version](https://badge.fury.io/js/solid-react-graphql-ld.svg)](https://www.npmjs.com/package/solid-react-graphql-ld) [![Greenkeeper badge](https://badges.greenkeeper.io/rubensworks/solid-react-graphql-ld.js.svg)](https://greenkeeper.io/)
+[![npm version](https://badge.fury.io/js/solid-react-graphql-ld.svg)](https://www.npmjs.com/package/solid-react-graphql-ld)
 
 [React](https://reactjs.org/) components and hooks for building [Solid](https://solid.inrupt.com/) apps with [GraphQL-LD](https://github.com/rubensworks/graphql-ld.js),
 a developer-friendly way to query Linked Data using _[GraphQL](https://graphql.org/)_ queries.
