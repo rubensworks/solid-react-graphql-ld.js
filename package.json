@@ -33,10 +33,7 @@
   "devDependencies": {
     "@testing-library/react": "^10.0.0",
     "@testing-library/react-hooks": "^3.0.0",
-    "@types/jest": "^25.1.0",
-    "@types/n3": "^1.1.4",
     "coveralls": "^3.0.0",
-    "graphql": "^14.5.4",
     "jest": "^25.0.0",
     "jest-mock-promise": "^1.0.23",
     "jest-rdf": "^1.3.0",
@@ -82,10 +79,12 @@
     "version": "manual-git-changelog onversion"
   },
   "dependencies": {
-    "@solid/context": "^1.0.0",
-    "@solid/react": "^1.7.0",
-    "@types/rdf-js": "^2.0.8",
-    "graphql-ld": "^1.0.0",
+    "@solid/context": "^1.1.0",
+    "@solid/react": "^1.9.0",
+    "@types/jest": "^25.1.0",
+    "@types/n3": "^1.1.4",
+    "@types/rdf-js": "^2.0.12",
+    "graphql-ld": "^1.1.0",
     "graphql-ld-comunica-solid": "^1.0.1",
     "prop-types": "^15.7.2",
     "ts-invariant": "^0.4.4"

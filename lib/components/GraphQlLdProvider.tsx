@@ -15,7 +15,7 @@ import {getGraphQlLdContext} from "../context/GraphQlLdContext";
 export function GraphQlLdProvider(args: GraphQlLdProviderArgs) {
   const GraphQlLdContext = getGraphQlLdContext();
   const client = 'client' in args ? args.client : new GraphQlLdClient({
-    baseIri: args.baseIri,
+    baseIRI: args.baseIRI,
     context: [ require('@solid/context'), args.context || {} ],
     queryEngine: new QueryEngineComunicaSolid({ sources: args.sources }),
   });
@@ -58,6 +58,6 @@ export type GraphQlLdProviderArgs = {
 } | {
   sources: IDataSource[],
   context?: any,
-  baseIri?: string;
+  baseIRI?: string;
   children: React.ReactNode | React.ReactNode[] | null;
 };
