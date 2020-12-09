@@ -87,7 +87,7 @@
     "graphql-ld": "^1.1.0",
     "graphql-ld-comunica-solid": "^1.0.1",
     "prop-types": "^15.7.2",
-    "ts-invariant": "^0.4.4"
+    "ts-invariant": "^0.6.0"
   },
   "peerDependencies": {
     "react": "^16.9.0"
