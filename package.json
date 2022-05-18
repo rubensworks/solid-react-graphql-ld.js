@@ -85,7 +85,7 @@
     "@types/n3": "^1.1.4",
     "@types/rdf-js": "^3.0.0",
     "graphql-ld": "^1.1.0",
-    "graphql-ld-comunica-solid": "^1.0.1",
+    "graphql-ld-comunica-solid": "^2.0.0",
     "prop-types": "^15.7.2",
     "ts-invariant": "^0.10.0"
   },
